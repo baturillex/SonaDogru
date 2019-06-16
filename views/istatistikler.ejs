@@ -1,0 +1,365 @@
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>CodePen - A Pen by panstable</title>
+
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+</head>
+<style>
+    body {
+        background: #ccc !important;
+    }
+
+    @import url(https://fonts.googleapis.com/css?family=Roboto);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    div {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .custom-nav {}
+
+    .custom-nav .col-md-2,
+    .col-md-8,
+    .col-md-7,
+    .col-md-3 {
+        padding: 0 !important;
+        margin: 0 !important
+    }
+
+    .h-left-con {
+        max-height: 70px;
+        height: 70px;
+        width: 100%;
+        background: #d9696a
+    }
+
+    .h-center-con {
+        max-height: 70px;
+        height: 70px;
+        width: 100%;
+        background: #fff;
+        padding-top: 20px
+    }
+
+    .h-right-con {
+        border-left: 1px solid #f3f4f5;
+        max-height: 70px;
+        height: 70px;
+        width: 100%;
+        background: #f7f8f9;
+        padding-top: 25px
+    }
+
+    .bottom-nav .nav-con {
+        background: #2d3438;
+        height: 90px;
+        width: 100%;
+    }
+
+    .bottom-nav .col-md-12 {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    .h-right-con ul {
+        padding: 0;
+        width: 80%;
+        height: 50px;
+        margin: 0 auto;
+    }
+
+    .h-right-con ul li {
+        float: lefT;
+        width: 33%;
+        text-align: center;
+    }
+
+    .h-right-con ul li i {
+        font-size: 14px;
+    }
+
+    .h-center-con input {
+        height: 30px;
+        border: 0px;
+        margin-left: 10px;
+    }
+
+    .h-center-con i {
+        color: #777;
+    }
+
+
+    .bottom-nav ul {
+        width: 98%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .bottom-nav ul li {
+        cursor: pointer;
+        float: left;
+        padding: 20px 0 0 0;
+        width: 20%;
+        height: 90px;
+    }
+
+    .bottom-nav ul li:hover {
+        background: #343B40
+    }
+
+    .bottom-nav ul li i {
+        color: #ccc;
+        font-size: 23px;
+    }
+
+    .bottom-nav ul li h4 {
+        margin-top: 15px;
+        color: #999;
+        font-size: 13px;
+        font-family: 'Roboto', sans-serif !important;
+    }
+
+    #quote {
+        font-size: 10pt;
+        color: #848484;
+        letter-spacing: 0px;
+    }
+
+    .number {
+        width: 40%;
+        font-size: 40pt;
+        position: relative;
+        float: left;
+        text-align: right;
+        overflow: hidden;
+        padding-top: 10px;
+        padding-right: 15px;
+    }
+
+    .type {
+        font-family: 'Roboto', sans-serif;
+        font-size: 5pt;
+        padding-top: 26px;
+        width: 46%;
+        float: left;
+        position: relative;
+        text-align: left;
+        overflow: hidden;
+        font-size: 20pt;
+        padding-left: 15px;
+
+    }
+
+    .details {
+        font-size: 10pt;
+        font-style: italic;
+    }
+
+    .statbox div {
+        /* float:left; */
+    }
+
+    .statbox {
+        height: 101px;
+        border-radius: 15px;
+        width: 360px;
+        margin-top: 40px;
+        margin-left: 60px;
+        background: -webkit-linear-gradient(#120F0F, #151212);
+        background: -o-linear-gradient(#120F0F, #151212);
+        background: -moz-linear-gradient(#120F0F, #151212);
+        background: linear-gradient(#2d3438, #2d3438);
+        text-align: center;
+        color: #ecf0f1;
+        font-size: 30pt;
+        font-family: 'Montserrat', sans-serif;
+
+    }
+
+    .statbox2 {
+        height: 101px;
+        border-radius: 15px;
+        width: 360px;
+        margin-top: -100px;
+        margin-left: 480px;
+        background: -webkit-linear-gradient(#120F0F, #151212);
+        background: -o-linear-gradient(#120F0F, #151212);
+        background: -moz-linear-gradient(#120F0F, #151212);
+        background: linear-gradient(#2d3438, #2d3438);
+        text-align: center;
+        color: #ecf0f1;
+        font-size: 30pt;
+        font-family: 'Montserrat', sans-serif;
+
+    }
+
+    #page {
+        height: 500px;
+    }
+
+
+    .quick-bar {
+        background: #fff;
+        min-height: 460px;
+        border-bottom: 1px solid #ebebeb;
+        padding: 10px 0 0 0;
+    }
+
+    .quick-bar .search-btn {
+        width: 100%;
+        height: 35px;
+        background: #6bb9d0;
+        color: #fff;
+        padding: 6px;
+        text-align: center;
+        margin: 10px 0 0 0;
+        border-radius: 1px;
+    }
+
+    .quick-bar input {
+        width: 100%;
+        border: 1px solid #ebebeb;
+        height: 35px;
+        padding: 0px 0 0 10px
+    }
+
+    .content {
+        min-height: 250px;
+        background: #f7f8f9;
+        padding-top: 25px;
+    }
+
+    .radio,
+    .checkbox {
+        display: block;
+        margin-bottom: 4px;
+        margin-top: 0;
+        min-height: 18px;
+        position: relative;
+    }
+
+    .table-bordered th {
+        background-color: #f2f3f6;
+        border: 0 none !important;
+    }
+
+    .table-bordered {
+        border: 1px solid #ddd;
+    }
+
+    th {
+        color: #6f7b8a;
+        font-weight: normal;
+    }
+
+    td {
+        background: #fff;
+    }
+</style>
+
+<body>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <div class="container">
+        <div class="row custom-nav">
+            <div class="col-md-3 aa">
+                <div class="h-left-con">
+                </div>
+            </div>
+            <div class="col-md-7 aa">
+                <div class="h-center-con">
+                    <div class="col-md-4">
+                        <i class="fa fa-search"></i><input type="text" placeholder="Search" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 aa">
+                <div class="h-right-con">
+                    <ul>
+                        <li>
+                            <i class="fa fa-th" style="color:#d9696a;"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-bar-chart-o" style="color:#666;"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-bell-o"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row bottom-nav">
+            <div class="col-md-12">
+                <div class="nav-con">
+                    <ul>
+                        <li>
+                            <i class="fa fa-users"></i>
+                            <h4>MEMBERS</h4>
+                        </li>
+                        <li>
+                            <i class="fa fa-truck"></i>
+                            <a href="/istatistikler">
+                                <h4>İstatistikler</h4>
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa fa-umbrella"></i>
+                            <h4>ORDER</h4>
+                        </li>
+                        <li>
+                            <i class="fa fa-shopping-cart"></i>
+                            <h4>SHOPPING</h4>
+                        </li>
+                        <li>
+                            <i class="fa fa-gears"></i>
+                            <h4>SETTING</h4>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row quick-bar">
+            <div class="col-md-2">
+                <% veri.forEach(function(İmgAc){ %>
+                <div class="statbox" style="color:#e6dbdc">
+                    <div class="number"><%= İmgAc.ToplamUye%></div>
+                    <div class="type" style="color:#e6dbdc">Kayıtlı Üye
+
+                    </div>
+                </div>
+                <div class="col-md-2">
+
+                    <div class="statbox2" style="color:#e6dbdc">
+                        <div class="number"><%= İmgAc.ToplamEtkinlik%></div>
+                        <div class="type" style="color:#e6dbdc">Toplam Etkinlik
+
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+</body>
+
+</html>
